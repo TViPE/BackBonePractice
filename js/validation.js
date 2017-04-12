@@ -17,6 +17,7 @@
 	console.log(Person.get('name'));
 
 	//Remove teh name attribute, force validation
-	Person.unset('name', {validate: true})
+	Person.unset('name', {validate: true});
+	//console.log(Person);
 	//false
 })(jQuery)
