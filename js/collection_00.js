@@ -31,4 +31,19 @@
 	//remove model from collection
 	todos.remove(c);
 	console.log("Collection size: " + todos.length);
+
+	// Retrieve models
+	var todo1 = new TodosCollection([myTodo]);
+	
+	// In Client-server aplications, coolections contain modesl obtained from the server. 
+	// Anytime you're exchang data between the client and a server, you will need a way
+	// to uniquely identify models. In Backbone, this is done using the id, cid, and 
+	// idAttribute properties.
+	var todo2 = todo1.get(2);
+	console.log(todo2 === myTodo);
+
+	var todoCid = todo1.get(todo2.cid);
+	console.log(todoCid === myTodo); 
+
+
 })(jQuery)
